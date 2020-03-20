@@ -1,0 +1,15 @@
+<%- include('./partials/header') %>
+
+  <h1 class="header">Add Task</h1>
+
+  <form method='post' action='/add'>
+      <fieldset class="task-form">
+        <label for='taskTitle'>Task Title</label>
+        <input type='text' id='taskTitle' name='title' />
+        <label for="date">Due Date</label>
+        <input type='datetime-local' id='date' name='dueDate' />
+
+        <input type='submit' value="Add Task" />
+      </fieldset>
+  </form>
+</html>
