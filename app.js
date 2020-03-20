@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const Todo = require('./models/Todo')
 const TodoList = require('./models/TodoList');
 
@@ -53,4 +53,6 @@ app.post('/update/:id', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(port, () => console.log(`Now listening on port ${port}`));
+app.listen(port, function(){
+  console.log(`Listening on port ${port}`);
+});
