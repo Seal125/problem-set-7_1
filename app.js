@@ -46,8 +46,8 @@ app.get('/update/:id', (req, res) => {
 
 app.post('/update/:id', (req, res) => {
   const id = req.params.id;
-  const {title, description, dueDate} = req.body;
-  todoList.updateTask(id, title, description, dueDate);
+  const {title, dueDate} = req.body;
+  todoList.updateTask(id, title, dueDate);
   todoList.incompleteTask(id)
   console.log(todoList.tasks)
   res.redirect('/');
